@@ -1,3 +1,20 @@
-build:
-  settings:
-    board_root: .
+manifest:
+  remotes:
+    - name: zmk
+      url-base: https://github.com/zmkfirmware
+    - name: user_config
+      url-base: https://github.com/ScorpIsTheGoat  # Replace with your GitHub username or repo location
+
+  projects:
+    - name: zmk
+      repo-path: zmk
+      remote: zmk
+      revision: main  # Use 'main' or the specific version/branch you need
+      import: west.yml
+    - name: user-config
+      repo-path: config
+      remote: user_config
+      revision: main  # Replace with the branch or tag of your custom configuration
+
+  self:
+    path: .
