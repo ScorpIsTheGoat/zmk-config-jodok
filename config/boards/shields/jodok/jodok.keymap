@@ -1,0 +1,25 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { // Layer 0
+            display-name = "Base Layer";
+            bindings = <
+                // Row 0 (Esc, Tab, Number Keys)
+                &kp ESC    &kp 1    &kp 2    &kp 3    &kp 4    &kp 5    &kp 6    &kp 7    &kp 8    &kp 9    &kp 0    &kp   &kp QUOT   &kp CARET  &kp BSPC  &kp DEL
+
+                // Row 1 (QWERTY Row)
+                &kp TAB&kp Q     &kp W    &kp E    &kp R    &kp T    &kp Z    &kp U    &kp I    &kp O    &kp P    &kp U DIAERESIS  &kp DIAERESIS  &kp SCLN  &none   &kp PGUP
+
+                // Row 2 (Home Row)
+                &kp CAPS &kp A     &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp O DIAERESIS &kp A DIAERESIS &kp ENT  &kp PGDN   
+
+                // Row 3 (Bottom Row with Shift, Ctrl, Arrow Keys)
+                &kp LSFT   &kp COMM  &kp Y    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMM   &kp DOT   &kp RSFT  &kp MINUS    &kp UP    &kp HOME
+
+                // Row 4 (Backspace, Delete, and Optional Keys)
+                &kp LCTRL  &kp LGUI  &kp LALT   &kp SPC   &kp RALT  &kp FN0   &kp RCTRL &kp LEFT  &kp UP  &kp RIGHT
+            >;
+        };
+    };
+};
