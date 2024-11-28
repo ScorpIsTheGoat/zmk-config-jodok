@@ -1,0 +1,6 @@
+if SHIELD_JODOK
+
+config ZMK_KEYBOARD_NAME
+    default "JODOK"
+
+endif
